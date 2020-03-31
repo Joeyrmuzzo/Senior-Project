@@ -1,0 +1,70 @@
+CHANGE LOG.
+11/5/2019 Started project. added webforms. added navigation via image and link buttons - Joey Muzzo
+
+11/6/2019 Added Log In and Log out buttons.  Added Log In web form.  Login button visible by defaut
+          Log out button not visible by default.  Program will handle this when loaded.
+		  When you click the log in button, it should take you to either the My Account page if secLvl 
+		  is low, else it takes you to Order info page - Daniel Crowder
+
+11/11/2019 added image and link buttons for clothing, plaque engraving, and trophy's on catalog webform - not sure if this is the design we want or just temporary idea - Joey Muzzo 
+11/11/2019 added microsoft access database file named Group4DB. Added a data set named dsCustomers. -Joey Muzzo
+
+11/14/2019 added ability to create, edit, and delete a user. - Joey Muzzo
+
+11/18/2019 added VerifyUser class for login - Joey Muzzo
+
+11/19/2019 added GetAddressInfo class to retireve customer address information for the MyAccount webform - Joey Muzzo
+11/19/2019 added session states for user validation - Joey Muzzo
+11/19/2019 added switch statement SecurityLevel with FormsAuthentication and cases for user security levels - Joey Muzzo
+11/19/2019 added dsCustomerInfo for user authentication - Joey Muzzo
+
+11/20/2019 added session UserNameID session state to track users - Joey Muzzo
+
+11/21/2019 added if statement to hide grdUsers, drop down security level, and security label unless user security level == "O" so customers cant edits users - Joey Muzzo
+11/21/2019 added if statement to redirect user to Login if they select PlaceOrder on Main and are not signed in - Joey Muzzo
+11/21/2019 added if statement to redirect user to Login if they select MyAccount on Main and are not signed in - Joey Muzzo
+11/21/2019 added grdCatalog to Catalog webform to display product catalog - Joey Muzzo
+
+11/23/2019 added labels and textboxes to accept customer and address information on CreateUser webform - Joey Muzzo
+11/23/2019 added grdOrders to MyAccount webfrom to display customers oders - Joey Muzzo
+11/23/2019 updated SaveUser class to accept new customers - Joey Muzzo, Daniel Crowder
+
+11/26/2019 added textbox validation for CreateUser webfrom - Joey Muzzo
+11/26/2019 added dsOrders dataset with PurchaseOrderDetail and PurchaseOrderForm tables. they are connected using the OrderID key - Joey Muzzo
+11/26/2019 updated grdCatalog and added SQL datasource to create connection to Product table. - Joey Muzzo
+11/26/2019 added lblDisplaySuccess to display the create user success message in black font - Joey Muzzo
+11/26/2019 added login case statement S for salepersons - Joey Muzzo
+
+11/27/2019 added SaveOrder function to save a cutsomers orders - Joey Muzzo
+11/27/2019 added catch exception to Catalog.cs page to catch errors - Joey Muzzo
+
+11/29/2019 added CalculateTotal to calculate the customers order total - Joey Muzzo
+
+11/30/2019 added UpdateCatalog function that allows operations managers to update the product catalog - Joey Muzzo
+11/30/2019 added SecurityLevel if statement that sets visibility of lables and text boxes to visible if the security level is equal to operations manager - Joey Muzzo
+11/30/2019 added input validation for UpdateCatalog. Makes sure all input fields are entered correctly. - Joey Muzzo
+
+12/4/2019 updated the update statement for grdOrders to only allow customers to edit the message to be printed field - Joey Muzzo
+12/4/2019 updated the update statement for grdCustomer to not allow customers to update their AddressID or UserID - Joey Muzzo
+12/4/2019 updated visibility for gridview on Catalog web from to not allow customers to edit the product catalog - Joey Muzzo
+
+12/6/2019 added grdOrderInformation which draws from SalesOrderForm, PurchaseOrderDetail, Customer, Users, and PurchaseOrderForm tables - Joey Muzzo
+12/6/2019 added drpEmployeeID dropdown list to PlaceOrder web form to allow customers to select the name of the employee helping them so they can recieve the 10% deposit - Joey Muzzo
+12/6/2019 updated SaveOrder function adds data to Purchase Order Form table after the original order information is sent.  -Daniel Crowder 
+
+12/9/2019 added if statements to hide gridview on OrderInformation web form unless security level is O or S - Joey Muzzo
+12/9/2019 updated SaveOrder function insert into SalesOrderForm statement - Daniel Crowder
+12/9/2019 updated SaveUser function insert into  Employee statement - Daniel Crowder
+12/9/2019 updated grdOrderInformation changed the visibility fo some fields and changes the editable status of certain fields - Joey Muzzo, Daniel Crowder
+12/9/2019 updated CreateUser field validation IF statements to account for creating Employee - Daniel Crowder
+
+12/10/2019 added IF statement to make btnOrderInfo visible = false if security level = C on Main web form - Joey Muzzo
+
+12/11/2019 updated the clsDataLayer save order function to be dynamic depending on what products are added - Daniel Crowder
+12/11/2019 updated the Place order design to not include the OrderID.  Order ID is now filled out by the database - Daniel Crowder
+12/11/2019 updated dropdown on Order Product page to reflect the name of the product, instead of the prodID - Daniel Crowder
+
+12/13/2019 added second gridview to OrderInformation web form to show order validation status - Daniel Crowder, Joey Muzzo
+12/13/2019 added SqlDataSource1_Updated statement to reload page when datasource is updated - Daniel Crowder, Joey Muzzo
+ 
+			
